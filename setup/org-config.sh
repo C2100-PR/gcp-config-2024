@@ -1,16 +1,1 @@
-#!/bin/bash
-
-# Organization-level GCP Identity setup
-# Enable required APIs
-gcloud services enable \
-  cloudresourcemanager.googleapis.com \
-  iam.googleapis.com \
-  iamcredentials.googleapis.com \
-  sts.googleapis.com \
-  --project=admin-coaching2100
-
-# Create organization-level identity pool
-gcloud iam workload-identity-pools create "org-federation-pool" \
-  --project=admin-coaching2100 \
-  --location="global" \
-  --display-name="Organization Federation Pool"
+{"encoding": "base64", "content": "IyEvYmluL2Jhc2gKCiMgT3JnYW5pemF0aW9uLWxldmVsIEdDUCBJZGVudGl0eSBzZXR1cAojIEVuYWJsZSByZXF1aXJlZCBBUElzCmdjbG91ZCBzZXJ2aWNlcyBlbmFibGUgXAogIGNsb3VkcmVzb3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29tIFwKICBpYW0uZ29vZ2xlYXBpcy5jb20gXAogIGlhbWNyZWRlbnRpYWxzLmdvb2dsZWFwaXMuY29tIFwKICBzdHMuZ29vZ2xlYXBpcy5jb20gXAogIC0tcHJvamVjdD1hZG1pbi1jb2FjaGluZzIxMDAKCiMgQ3JlYXRlIG9yZ2FuaXphdGlvbi1sZXZlbCBpZGVudGl0eSBwb29sCmdjbG91ZCBpYW0gd29ya2xvYWQtaWRlbnRpdHktcG9vbHMgY3JlYXRlICJvcmctZmVkZXJhdGlvbi1wb29sIiBcCiAgLS1wcm9qZWN0PWFkbWluLWNvYWNoaW5nMjEwMCBcCiAgLS1sb2NhdGlvbj0iZ2xvYmFsIiBcCiAgLS1kaXNwbGF5LW5hbWU9Ik9yZ2FuaXphdGlvbiBGZWRlcmF0aW9uIFBvb2wi"}
