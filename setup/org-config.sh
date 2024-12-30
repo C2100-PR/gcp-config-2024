@@ -1,5 +1,16 @@
+#!/bin/bash
 
-{
-  "encoding": "utf-8",
-  "content": "#!/bin/bash\n\n# Organization-level GCP Identity setup\n# Enable required APIs\ngcloud services enable \\\n  cloudresourcemanager.googleapis.com \\\n  iam.googleapis.com \\\n  iamcredentials.googleapis.com \\\n  sts.googleapis.com \\\n  --project=admin-coaching2100\n\n# Create organization-level identity pool\ngcloud iam workload-identity-pools create \"org-federation-pool\" \\\n  --project=admin-coaching2100 \\\n  --location=\"global\" \\\n  --display-name=\"Organization Federation Pool\""
-}
+# Organization-level GCP Identity setup
+# Enable required APIs
+gcloud services enable \
+  cloudresourcemanager.googleapis.com \
+  iam.googleapis.com \
+  iamcredentials.googleapis.com \
+  sts.googleapis.com \
+  --project=admin-coaching2100
+
+# Create organization-level identity pool
+gcloud iam workload-identity-pools create "org-federation-pool" \
+  --project=admin-coaching2100 \
+  --location="global" \
+  --display-name="Organization Federation Pool"
